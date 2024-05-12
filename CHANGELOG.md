@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.3] - 2024-05-12
+### :sparkles: New Features
+- [`230b440`](https://github.com/WinDanesz/WizardryUtils/commit/230b4401e9ae7117a5396b96104e17f7a299020d) - Added MinionDeathEvent for temporary minions *(commit by [@WinDanesz](https://github.com/WinDanesz))*
+
+### :bug: Bug Fixes
+- [`178fb6a`](https://github.com/WinDanesz/WizardryUtils/commit/178fb6a01730cb45d8c36354872eaa508820dfa8) - Updated dusty item tooltip *(commit by [@WinDanesz](https://github.com/WinDanesz))*
+
+
 ## [v1.2.2] - 2024-03-16
 ### :bug: Bug Fixes
 - [`0bd32ff`](https://github.com/WinDanesz/WizardryUtils/commit/0bd32ff2990e54c17203b4b680b0095d546478e4) - EntityAIMinionOwnerHurtTarget and EntityAIMinionOwnerHurtByTarget works with ISummonedCreature mobs *(commit by [@WinDanesz](https://github.com/WinDanesz))*
@@ -93,3 +101,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v1.2.0]: https://github.com/WinDanesz/WizardryUtils/compare/v1.1.4...v1.2.0
 [v1.2.1]: https://github.com/WinDanesz/WizardryUtils/compare/v1.2.0...v1.2.1
 [v1.2.2]: https://github.com/WinDanesz/WizardryUtils/compare/v1.2.1...v1.2.2
+[v1.2.3]: https://github.com/WinDanesz/WizardryUtils/compare/v1.2.2...v1.2.3
