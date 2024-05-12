@@ -5,6 +5,7 @@ import com.windanesz.wizardryutils.WizardryUtils;
 import com.windanesz.wizardryutils.entity.ai.EntityAIMinionOwnerHurtByTarget;
 import com.windanesz.wizardryutils.entity.ai.EntityAIMinionOwnerHurtTarget;
 import com.windanesz.wizardryutils.entity.ai.EntitySummonAIFollowOwner;
+import com.windanesz.wizardryutils.event.MinionDeathEvent;
 import electroblob.wizardry.Wizardry;
 import electroblob.wizardry.entity.living.EntityWizard;
 import electroblob.wizardry.entity.living.ISummonedCreature;
@@ -34,6 +35,7 @@ import net.minecraft.util.EntityDamageSource;
 import net.minecraft.util.EntityDamageSourceIndirect;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.Capability.IStorage;
 import net.minecraftforge.common.capabilities.CapabilityInject;
@@ -218,6 +220,7 @@ public class SummonedCreatureData extends SummonedThing {
 		// For some reason Minecraft reads the entity from NBT just after the entity is created, so setting -1 as a
 		// default lifetime doesn't work. The easiest way around this is to use 0 - nobody's going to need it!
 		if (minion.ticksExisted > this.getLifetime() && this.getLifetime() > 0) {
+			MinecraftForge.EVENT_BUS.post(new MinionDeathEvent(minion, getCaster()));
 			minion.setDead();
 		}
 
